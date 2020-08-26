@@ -1,0 +1,52 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	
+	<Dialog title="Detalhes do Compartimento" class="sapUiSizeCompact" contentWidth="40%" contentHeight="50%">
+		
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="3" labelSpanM="12" labelSpanS="12"
+					  adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+					  singleContainerFullSize="false">
+			<f:content>
+				
+				<!-- 1º Início - Coluna -->
+				
+				<core:Title text="" level="H6"/>
+				<Label text="Liberação" required="false"/>
+				<Input id="idLiberacao" type="Text" enabled="false" showValueHelp="false" valueHelpRequest="handleValueHelpClientes" 
+				       change="" value="{/liberacao}" valueState="" tooltip="Código da Liberação" />
+				<Input id="idLiberacaoConf" type="Text" enabled="false" value="{/liberacaoConf}" tooltip="Liberação Conf." />
+				<RadioButton groupName="GroupB" text="" selected="true" />
+				
+				<Label text="Tipo de Cana" required="false"/>
+				<Input id="idTipoCana" type="Text" enabled="false" showValueHelp="false" valueHelpRequest="handleValueHelpEmpresas" 
+				       change="" value="{/tipoCana}" valueState="" tooltip="Código Tipo de Cana" />
+				       
+				<Label text="Nome Fazenda" required="false"/>
+				<Input id="idNomeFazenda" type="Text" enabled="false" value="{/nomeFazenda}" />
+				
+				<Label text="" />
+				<Input id="idRazaoFazenda" type="Text" enabled="false" value="{/razaoFazenda}" />
+				
+				<Label text="Proprietário" required="false"/>
+				<Input id="idProprietario" type="Text" enabled="false" value="{/proprietario}" />
+				
+				<!-- 1º Fim - Coluna -->
+				
+				<!-- 2º Início - Coluna -->
+				
+				<!--<core:Title text="" level="H6"/>-->
+				<!--<Label text="" />-->
+				
+				<!-- 2º Fim - Coluna -->
+				
+			</f:content>
+			
+		</f:SimpleForm>
+		
+		<endButton>
+			<Button text="Fechar" press="onCloseDetalhesCompartimento" />
+		</endButton>
+		
+	</Dialog>
+	
+</core:FragmentDefinition>

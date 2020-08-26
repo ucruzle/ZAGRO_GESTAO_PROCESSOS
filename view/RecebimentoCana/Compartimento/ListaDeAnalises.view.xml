@@ -1,0 +1,130 @@
+<mvc:View controllerName="sap.agro.gestaoprocessos.controller.RecebimentoCana" 
+		  xmlns="sap.ui.table"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns:u="sap.ui.unified"
+		  xmlns:c="sap.ui.core"
+		  xmlns:m="sap.m"
+	      height="100%">
+	
+		<Table rows="{/Analises}"
+			   selectionMode="Single"
+			   visibleRowCount="5"
+			   ariaLabelledBy="title">
+			<extension>
+				<m:OverflowToolbar>
+					<m:ToolbarSpacer />
+					<m:Button icon="sap-icon://detail-view" press="onViewListaAnalises" tooltip="Exibir Análises" />
+				</m:OverflowToolbar>
+			</extension>
+			<columns>
+				<Column width="6rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Veíc/Carreta" tooltip="Veículo / Carreta" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{veiculoCarreta}" 
+								 enabled="false" 
+								 tooltip="Veículo / Carreta"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="8rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Carreg/Colhed" tooltip="Carregadora / Colhedora" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{carregadoraColhedora}" 
+								 enabled="false" 
+								 tooltip="Carregadora / Colhedora"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="6rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Operador" tooltip="Operador" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{operador}" 
+								 enabled="false" 
+								 tooltip="Operador"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="6rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Reboque" tooltip="Reboque" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{reboque}" 
+								 enabled="false" 
+								 tooltip="Reboque"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="6rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Noteiro" tooltip="Noteiro" />
+						<m:Label text="" />
+				    </multiLabels>
+					<template>
+						<m:Input value="{noteiro}" 
+								 enabled="false" 
+								 tooltip="Noteiro"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="5rem" headerSpan="2" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Balança" />
+						<m:Label text="Manual" tooltip="Balança Manual" />
+				    </multiLabels>
+					<template>
+						<m:Input value="{balancaManual}" 
+								 enabled="false" 
+								 tooltip="Balança Manual"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="7rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Balança" />
+						<m:Label text="Automática" tooltip="Balança Automática" />
+				    </multiLabels>
+					<template>
+						<m:Input value="{balancaAutomatica}" 
+								 enabled="false" 
+								 tooltip="Balança Automática"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="5rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Bituca" tooltip="Bituca" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{bituca}" 
+								 enabled="false" 
+								 tooltip="Bituca"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="4rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="" tooltip="" />
+				    </multiLabels>
+					<template>
+						<m:Button icon="sap-icon://display" 
+								  type="Transparent" 
+								  press="onVerDetalheAnalise" 
+								  tooltip="Visualizar Detalhes da Análise" />
+					</template>
+				</Column>
+			</columns>
+		</Table>
+	
+</mvc:View>

@@ -1,0 +1,55 @@
+<mvc:View controllerName="sap.agro.gestaoprocessos.controller.RecebimentoCana" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" class="sapUiSizeCompact">
+				
+	
+	<IconTabBar id="idIconTabBarMulti" class="sapUiResponsiveContentPadding">
+		<items>
+			
+			<IconTabFilter icon="sap-icon://shelf" text="Compartimentos" tooltip="Compartimentos do Veículo">
+			
+				<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+					<content>
+						<mvc:XMLView viewName="sap.agro.gestaoprocessos.view.RecebimentoCana.Compartimento.ListaDeCompartimentos"/>
+					</content>
+				</Panel>
+			
+			</IconTabFilter>
+			
+			<IconTabFilter icon="sap-icon://business-objects-experience" text="Análises" tooltip="Análise por amostragem">
+				
+		    	<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+					<content>
+						<mvc:XMLView viewName="sap.agro.gestaoprocessos.view.RecebimentoCana.Compartimento.ListaDeAnalises"/>
+					</content>
+				</Panel>
+		    
+		    </IconTabFilter>
+		    
+		    <IconTabFilter icon="sap-icon://compare" text="Pesagens" tooltip="Pesagem Total, Bruto, Tara, Líquido e Descarga">
+				
+		    	<Panel width="auto" class="sapUiResponsiveMargin" accessibleRole="Region">
+					
+					<headerToolbar>
+						<OverflowToolbar>
+							<Title text="PESO TOTAL"/>
+							<Title text=" - " />
+							<Title text="150.000" />
+							<ToolbarSpacer />
+							<Title text="Balança" />
+							<!--<Title text="{nroBalanca}" />-->
+							<Title text=" - " />
+							<Title text="33" />
+						</OverflowToolbar>
+					</headerToolbar>
+					
+					<content>
+						<mvc:XMLView viewName="sap.agro.gestaoprocessos.view.RecebimentoCana.Compartimento.ListaDePesagens"/>
+					</content>
+				</Panel>
+		    
+		    </IconTabFilter>
+	
+		</items>
+	</IconTabBar>
+	
+</mvc:View>	

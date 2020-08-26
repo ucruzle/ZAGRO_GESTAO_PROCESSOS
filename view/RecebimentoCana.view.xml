@@ -1,0 +1,36 @@
+<mvc:View controllerName="sap.agro.gestaoprocessos.controller.RecebimentoCana" xmlns:html="http://www.w3.org/1999/xhtml"
+	xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
+	<Page title="Gestão de Processos Agrícola - Recebimento de Cana de Açúcar / Balança" showHeader="true" showNavButton="true" navButtonPress="onNavBack">
+		<content>
+			<!--<FlexBox justifyContent="End" class="sapUiLargeMarginEnd">-->
+			<!--	<Button text="Salvar operação" press="onSaveOperacao" type="Emphasized"/>-->
+			<!--</FlexBox>-->
+			<mvc:XMLView viewName="sap.agro.gestaoprocessos.view.RecebimentoCana.Cabecalho"/>
+			<mvc:XMLView viewName="sap.agro.gestaoprocessos.view.RecebimentoCana.Compartimento"/>
+			<!--<mvc:XMLView viewName="sap.agro.gestaoprocessos.view.TableMateriais"/>-->
+			<!--<mvc:XMLView viewName="sap.agro.gestaoprocessos.view.Nota"/>-->
+		</content>
+		<footer>
+			<Toolbar>
+				<Button id="btnLerSmartCard" icon="sap-icon://credit-card" text="SM.CARD" press="onLerSmartCard" tooltip="Ler Smart Card">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+				</Button>
+				<Button id="btnLerSmartCardReturn" icon="sap-icon://cause" type="Transparent" press="onLerSmartCardReturn" tooltip="Renovar Leitura Smart Card" />
+				<Button id="btnObterPeso" icon="sap-icon://compare-2" text="Peso" press="onObterPeso" tooltip="Obter Peso">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+				</Button>
+				<Button id="btnObterPesoReturn" icon="sap-icon://cause" type="Transparent" press="onObterPesoReturn" tooltip="Renovar Obtenção de Peso" />
+				<Button type="Emphasized" id="btnGravar" icon="sap-icon://save" text="Gravar" press="onGravar" tooltip="Gravar dados do recebimento de cana">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+				</Button>
+				<Button id="btnCertificadoPesagem" icon="sap-icon://validate" text="Certificado" press="onCertificadoPesagem" tooltip="Certificado de Pesagem">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+				</Button>
+				<ToolbarSpacer/>
+				<Button id="btnMensagemPainel" icon="sap-icon://order-status" text="Painel" press="onMensagemPainel" tooltip="Mensagem Painel">
+					<layoutData><OverflowToolbarLayoutData priority="NeverOverflow"/></layoutData>
+				</Button>
+			</Toolbar>
+		</footer>
+	</Page>
+</mvc:View>

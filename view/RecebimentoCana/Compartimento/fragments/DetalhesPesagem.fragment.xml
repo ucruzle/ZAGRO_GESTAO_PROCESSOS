@@ -1,0 +1,47 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	
+	<Dialog title="Detalhes da Pesagem" class="sapUiSizeCompact" contentWidth="40%" contentHeight="50%">
+		
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="3" labelSpanM="12" labelSpanS="12"
+					  adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="1" columnsL="1" columnsM="1"
+					  singleContainerFullSize="false">
+			<f:content>
+				
+				<!-- 1º Início - Coluna -->
+				
+				<core:Title text="" level="H6"/>
+				<Label text="Bruto" required="false"/>
+				<Input id="idBruto" type="Text" enabled="false" showValueHelp="false" valueHelpRequest="handleValueHelpClientes" 
+				       change="" value="{/pesoBruto}" valueState="" tooltip="Peso Bruto" />
+				       
+				<Label text="Tara" required="false"/>
+				<Input id="idTara" type="Text" enabled="false" value="{/pesoTara}" tooltip="Peso Tara" />
+				
+				<Label text="Líquido" required="false"/>
+				<Input id="idLiquido" type="Text" enabled="false" value="{/pesoLiquido}" tooltip="Peso Líquido" />
+				
+				<Label text="Descarga" required="false"/>
+				<Input id="idDescarga" type="Text" enabled="false" showValueHelp="false" valueHelpRequest="handleValueHelpEmpresas" 
+				       change="" value="{/descarga}" valueState="" tooltip="Descarga" />
+				       
+				<!-- 1º Fim - Coluna -->
+				
+				<!-- 2º Início - Coluna -->
+				
+				<!--<core:Title text="" level="H6"/>-->
+				<!--<Label text="" />-->
+				
+				<!-- 2º Fim - Coluna -->
+				
+			</f:content>
+			
+		</f:SimpleForm>
+		
+		<endButton>
+			<Button text="Fechar" press="onCloseDetalhesPesagem" />
+		</endButton>
+		
+	</Dialog>
+	
+</core:FragmentDefinition>

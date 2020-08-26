@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog noDataText="Nenhum veículo encontrado" title="Selecionar Veículo" search="handleValueHelpSearchVeiculos"
+		liveChange="handleValueHelpSearchVeiculos" confirm="handleCloseVeiculos" multiSelect="false" growingThreshold="500" items="{Veiculos}">
+		<ColumnListItem>
+			<cells>
+				<Text text="{idVeiculo}"/>
+				<Text text="{descricaoVeiculo}"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+			<Column width="12em">
+				<header></header>
+			</Column>
+			<Column width="12em">
+				<header></header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

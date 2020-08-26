@@ -1,0 +1,82 @@
+<mvc:View controllerName="sap.agro.gestaoprocessos.controller.RecebimentoCana" 
+		  xmlns="sap.ui.table"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns:u="sap.ui.unified"
+		  xmlns:c="sap.ui.core"
+		  xmlns:m="sap.m"
+	      height="100%">
+	
+		<Table rows="{/Pesagens}"
+			   selectionMode="Single"
+			   visibleRowCount="5"
+			   ariaLabelledBy="title">
+			<extension>
+				<m:OverflowToolbar>
+					<m:ToolbarSpacer />
+					<m:Button icon="sap-icon://detail-view" press="onViewListaPesagens" tooltip="Exibir Pesagens" />
+				</m:OverflowToolbar>
+			</extension>
+			<columns>
+				<Column width="10rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Bruto" tooltip="Peso Bruto" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{pesoBruto}" 
+								 enabled="false" 
+								 tooltip="Peso Bruto"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="10rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Tara" tooltip="Peso Tara" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{pesoTara}" 
+								 enabled="false" 
+								 tooltip="Peso Tara"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="10rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Líquido" tooltip="Peso Líquido" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{pesoLiquido}" 
+								 enabled="false" 
+								 tooltip="Peso Líquido"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="5rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Descarga" tooltip="Descarga" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{descarga}" 
+								 enabled="false" 
+								 tooltip="Descarga"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="4rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="" tooltip="" />
+				    </multiLabels>
+					<template>
+						<m:Button icon="sap-icon://display" 
+								  type="Transparent" 
+								  press="onVerDetalhePesagem" 
+								  tooltip="Visualizar Detalhes da Pesagem" />
+					</template>
+				</Column>
+			</columns>
+		</Table>
+	
+</mvc:View>

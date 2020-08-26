@@ -1,0 +1,58 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:l="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1">
+	
+	<Dialog title="Detalhes da Análise" class="sapUiSizeCompact" contentWidth="40%" contentHeight="50%">
+		
+		<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="2" labelSpanL="3" labelSpanM="12" labelSpanS="12"
+					  adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="2" columnsL="2" columnsM="2"
+					  singleContainerFullSize="false">
+			<f:content>
+				
+				<!-- 1º Início - Coluna -->
+				
+				<core:Title text="" level="H6"/>
+				<Label text="Veíc/Carreta" required="false"/>
+				<Input id="idVeiculoCarreta" type="Text" enabled="false" showValueHelp="false" valueHelpRequest="handleValueHelpClientes" 
+				       change="" value="{/veiculoCarreta}" valueState="" tooltip="Veículo / Carreta" />
+				       
+				<Label text="Carreg/Colhed" required="false"/>
+				<Input id="idCarregadoraColhedora" type="Text" enabled="false" value="{/carregadoraColhedora}" tooltip="Carregadora / Colhedora" />
+				
+				<Label text="Operador" required="false"/>
+				<Input id="idOperador" type="Text" enabled="false" value="{/operador}" tooltip="Operador" />
+				
+				<Label text="Reboque" required="false"/>
+				<Input id="idReboque" type="Text" enabled="false" showValueHelp="false" valueHelpRequest="handleValueHelpEmpresas" 
+				       change="" value="{/reboque}" valueState="" tooltip="Reboque" />
+				       
+				<Label text="Noteiro" required="false"/>
+				<Input id="idNoteiro" type="Text" enabled="false" value="{/noteiro}" tooltip="Noteiro" />
+				
+				
+				<!-- 1º Fim - Coluna -->
+				
+				<!-- 2º Início - Coluna -->
+				
+				<core:Title text="" level="H6"/>
+				<Label text="Balança Manual" required="false"/>
+				<Input id="idBalancaManual" type="Text" enabled="false" value="{/balancaManual}" tooltip="Balança Manual" />
+				
+				<Label text="Balança Automática" required="false"/>
+				<Input id="idBalancaAutomatica" type="Text" enabled="false" value="{/balancaAutomatica}" tooltip="Balança Automática" />
+				
+				<Label text="Bituca" required="false"/>
+				<Input id="idBituca" type="Text" enabled="false" value="{/bituca}" tooltip="Bituca" />
+				
+				<!-- 2º Fim - Coluna -->
+				
+			</f:content>
+			
+		</f:SimpleForm>
+		
+		<endButton>
+			<Button text="Fechar" press="onCloseDetalhesAnalise" />
+		</endButton>
+		
+	</Dialog>
+	
+</core:FragmentDefinition>

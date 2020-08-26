@@ -1,0 +1,19 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core">
+	<TableSelectDialog noDataText="Nenhum motorista encontrado" title="Selecionar Motorista" search="handleValueHelpSearchMotoristas"
+		liveChange="handleValueHelpSearchMotoristas" confirm="handleCloseMotoristas" multiSelect="false" growingThreshold="500" items="{Motoristas}">
+		<ColumnListItem>
+			<cells>
+				<Text text="{idMotorista}"/>
+				<Text text="{nomeMotorista}"/>
+			</cells>
+		</ColumnListItem>
+		<columns>
+			<Column width="12em">
+				<header></header>
+			</Column>
+			<Column width="12em">
+				<header></header>
+			</Column>
+		</columns>
+	</TableSelectDialog>
+</core:FragmentDefinition>

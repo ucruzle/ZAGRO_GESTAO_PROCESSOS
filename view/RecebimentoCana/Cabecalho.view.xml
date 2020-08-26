@@ -1,0 +1,48 @@
+<mvc:View controllerName="sap.agro.gestaoprocessos.controller.RecebimentoCana" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:f="sap.ui.layout.form" xmlns:l="sap.ui.layout" class="sapUiSizeCompact">
+	
+	<f:SimpleForm editable="true" layout="ResponsiveGridLayout" labelSpanXL="3" labelSpanL="3" labelSpanM="12" labelSpanS="12"
+		adjustLabelSpan="false" emptySpanXL="0" emptySpanL="0" emptySpanM="0" emptySpanS="0" columnsXL="3" columnsL="3" columnsM="3"
+		singleContainerFullSize="false" title="Dados Gerais de Recebimento de Cana de Açúcar">
+		
+		<f:content>
+			
+			<!-- 1º coluna - Início -->
+			
+			<core:Title text="" level="H6"/>
+			<Label text="Carga" required="false" />
+			<Input id="idTipoCarga" type="Text" showValueHelp="true" valueHelpRequest="handleValueHelpTipoCarga" change="changeTipoCarga" submit="changeTipoCarga" value="" valueState="" tooltip="Tipo de Carga" />
+			<Label text="Caminhão" required="false"/>
+			<Input id="idCaminhao" type="Text" showValueHelp="true" valueHelpRequest="handleValueHelpCaminhao" change="" value="" valueState="" tooltip="Código do Veículo" />
+			<Label text="Motorista" required="false"/>
+			<Input id="idMotorista" type="Text" showValueHelp="true" valueHelpRequest="handleValueHelpMotorista" change="" value="" valueState="" tooltip="Código do Motorista" />
+			
+			<!-- 1º coluna - Fim -->
+			
+			<!--2º coluna - Início -->
+			
+			<core:Title text="" level="H6"/>
+			<Label text="Nº Viagem" required="false" />
+			<Input id="idNroViagem" type="Text" showValueHelp="true" valueHelpRequest="handleValueHelpNroViagem" change="" value="" valueState="" tooltip="Nº da Viagem" />
+			<Label text="Entrada" required="false" />
+			<DatePicker id="idDataEntrada" displayFormat="short" value="{ path: '/dataEntrada', type: 'sap.ui.model.type.Date', formatOptions: {style: 'short', UTC: true}}" tooltip="Data entrada" change="" />
+			<TimePicker id="idHoraEntrada" dateValue="{Ordem>/horaEntrada}" tooltip="Hora entrada" change="" />
+			<Label text="Saída" required="false"/>
+			<DatePicker id="idDataSaida" displayFormat="short" value="{ path: '/dataSaida', type: 'sap.ui.model.type.Date', formatOptions: {style: 'short', UTC: true}}" tooltip="Data saída" change="" />
+			<TimePicker id="idHoraSaida" dateValue="{Ordem>/horaSaida}" tooltip="Hora saída" change="" />
+			
+			<!--2º coluna - Fim -->
+			
+			<!--3º coluna - Início -->
+			
+			<core:Title text="" level="H6"/>
+			<Label text="" required="false"/>
+			<Button text="Veículo no pátio" press="onVeiculoPatio" type="Emphasized" icon="sap-icon://shipping-status" />
+			
+			<!--3º coluna - Fim -->
+			
+		</f:content>
+		
+	</f:SimpleForm>
+	
+</mvc:View>

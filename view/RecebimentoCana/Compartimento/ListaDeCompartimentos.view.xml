@@ -1,0 +1,105 @@
+<mvc:View controllerName="sap.agro.gestaoprocessos.controller.RecebimentoCana" 
+		  xmlns="sap.ui.table"
+		  xmlns:mvc="sap.ui.core.mvc"
+		  xmlns:u="sap.ui.unified"
+		  xmlns:c="sap.ui.core"
+		  xmlns:m="sap.m"
+	      height="100%">
+	
+		<Table rows="{/Compartimentos}"
+			   selectionMode="Single"
+			   visibleRowCount="5"
+			   ariaLabelledBy="title">
+			<extension>
+				<m:OverflowToolbar>
+					<m:ToolbarSpacer />
+					<m:Button icon="sap-icon://detail-view" press="onViewListaCompartimentos" tooltip="Exibir Compartimentos" />
+				</m:OverflowToolbar>
+			</extension>
+			<columns>
+				<Column width="5rem" headerSpan="3" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Liberação" tooltip="Liberação" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{liberacao}" 
+								 enabled="false" 
+								 tooltip="Liberação"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="5rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Liberação" tooltip="Liberação" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{liberacaoConf}" 
+								 enabled="false" 
+								 tooltip="Confirma Liberação"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="5rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Liberação" tooltip="Liberação" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:VBox class="sapUiSmallMargin">
+							<m:RadioButton groupName="GroupA" text="" selected="true" />
+						</m:VBox>
+					</template>
+				</Column>
+				<Column width="6rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Tipo Cana" tooltip="Tipo de Cana" />
+						<m:Label text="" />
+					</multiLabels>
+					<template>
+						<m:Input value="{tipoCana}" 
+								 enabled="false" 
+								 tooltip="Tipo de Cana"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="15rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Nome Fazenda" tooltip="Nome da Fazenda" />
+						<m:Label text="" />
+				    </multiLabels>
+					<template>
+						<m:Input value="{nomeFazenda}" 
+								 enabled="false" 
+								 tooltip="Nome da Fazenda"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="15rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="Proprietário" tooltip="Nome do Proprietário" />
+						<m:Label text="" />
+				    </multiLabels>
+					<template>
+						<m:Input value="{proprietario}" 
+								 enabled="false" 
+								 tooltip="Nome do Proprietário"
+								 showValueHelp="false" />
+					</template>
+				</Column>
+				<Column width="4rem" hAlign="Center">
+					<multiLabels>
+						<m:Label text="" tooltip="" />
+				    </multiLabels>
+					<template>
+						<m:Button icon="sap-icon://display" 
+								  type="Transparent" 
+								  press="onVerDetalheCompartimento" 
+								  tooltip="Visualizar Detalhes do Compartimento" />
+					</template>
+				</Column>
+			</columns>
+		</Table>
+	
+</mvc:View>
